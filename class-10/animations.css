@@ -1,0 +1,36 @@
+body {
+	margin: 0;
+}
+
+
+
+.circle-animation-container {
+	display: inline-block;
+	width: 40%;
+	margin-left: 200px;
+	margin-top: 200px;
+	transform-origin: center center;
+	animation: circle 3s linear infinite ;
+
+}
+
+
+
+@keyframes circle
+
+{
+  0%{
+    transform:rotate(0deg)
+              translate(-200px)
+              rotate(0deg);
+  
+  }
+  100%{
+    transform:rotate(360deg)
+              translate(-200px)
+              rotate(-360deg);
+  }
+}
+
+
+}

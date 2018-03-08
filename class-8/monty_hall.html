@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AC Frontend Basics</title>
+	<script src="monty_hall.js"> </script>
+	<style>
+		:root {
+			--door-width: 300px;
+			
+		}
+
+		body {
+			margin: 0;
+			background-color: white;
+			color:black;
+
+		}
+
+		.doors {
+			display: flex;
+			flex-direction: row;
+		}
+
+
+		.door-frame {
+
+			height: var(--door-width);
+			width: calc(var(--door-width) / 2);
+			margin:30px;
+			background-color: red;
+			transform: rotateX(-30deg);
+			transform-style: preserve-3d;
+		}
+
+		.door {
+			background-color: #888888;
+			height: 100%;
+			width: 100%;
+
+			transform-origin: left;
+			transition: transform 2s ease;
+		}
+
+		.door:hover {
+			transform: rotateY(-65deg);
+
+
+		}
+
+		.door-label {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-family: arial;
+			color: white;
+			font-size: 20px;
+		}
+
+		.door-frame-1 {
+			background-image: url("goat.jpeg");
+			background-size: cover;
+		}
+
+		.door-frame-2 {
+			background-image: url("car.jpeg");
+			background-size: cover;
+
+		}
+
+	</style>
+</head>
+<body>
+<div class="doors">
+	<div class="door-frame door-frame-1">
+		<div class="door door-1">
+			<span class="door-label">Door 1</span>
+		</div>	
+	</div>
+
+	<div class="door-frame door-frame-2">
+		<div class="door door-2">
+			<span class="door-label">Door 2</span>
+		</div>	
+	</div>
+
+	<div class="door-frame door-frame-3">
+		<div class="door door-3">
+			<span class="door-label">Door 3</span>
+		</div>	
+	</div>
+</div>
+
+
+</body>
+</html>

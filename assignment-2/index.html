@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello World</title>
+
+<!-- <script type="text/javascript">
+	console.log("Hello")
+</script> -->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+<script src="console.js"></script>
+
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ -->
+<style>
+	h1 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+	}
+
+	.container {
+ 	 display: flex;
+ 	 flex-wrap: wrap; /* or inline-flex */
+	}
+
+	.maincol {
+		display: flex;
+		min-height: 400px;
+
+	}
+
+	.inner-col {
+		display: inline-block;
+		height: 80%;
+		width: 90%;
+		margin: auto;
+
+	}
+
+	.formfield {
+		margin-top: 50px;
+	}
+
+	.grids {
+		margin: 5px;
+		margin-top: 0px;
+		margin-left: 2px;
+		max-width: 190px;
+		min-height: 190px;
+	}
+
+	.nested {
+		margin: auto;
+	}
+
+
+
+</style>
+
+
+</head>
+<body>
+
+
+<div class="container-fluid color-changer">
+	<div class="row">
+		<div class="  col-12"><h1> Section 1 </h1></div>
+
+<!-- 		<div class="col">
+			<h1> Color Changer</h1>
+		</div> -->
+		<div class="col-8 maincol" style="border-style: solid;  border-color: grey;" >
+
+			<div id="transformBox1" class="inner-col" style="border-style: solid;  border-color: grey;">
+				<div id="transformText1"> Enter your color 
+				</div>
+			
+			</div>
+		</div>
+
+		<div class="col-4 navcol" style="background-color: grey">
+
+			<div>
+				BG Color
+				<input class="formfield input-box" type="text" name="hex-code" placeholder="Enter Hex Code" id="bg-textfield" oninput="enterBGColor()">
+			</div>
+
+			<div>
+				Header Color
+				<input class="formfield input-box" type="text" name="hex-code" placeholder="Enter Hex Code" id="header-textfield" oninput="enterHeaderColor()">
+			</div>
+		</div>
+	</div>
+</div>
+<br/> <br/>
+
+<!-- Section 2 starts here -->
+
+<div class="container-fluid" id="color-changer">
+	<div class="row">
+		<div class=" col-12"><h1> Section 2 </h1></div>
+
+		<div class="col-8 maincol row" style="border-style: solid;  border-color: grey;" >
+ 
+		
+			<div id="sideBar" class="col-2 nested" style="border-style: solid;  border-color: grey;"> nav
+			</div>
+
+			<div id="contentBox" class="col-10 nested" style="border-style: solid;  border-color: grey;">
+				<div id="contentText">content</div>
+			</div>
+
+		</div>
+
+		<div class="col-4 navcol" style="background-color: grey">
+
+			<div>
+				Sidebar Color
+				<input class="formfield input-box" type="text" name="hex-code" placeholder="Enter Hex Code" id="sidebar-textfield" oninput="enterSidebarColor()">
+			</div>
+
+			<div>
+				Content BG Color
+				<input class="formfield input-box" type="text" name="hex-code" placeholder="Enter Hex Code" id="content-bg-textfield" oninput="enterContentBGColor()">
+			</div>
+
+			<div>
+				Content Text Color
+				<input class="formfield input-box" type="text" name="hex-code" placeholder="Enter Hex Code" id="content-txt-textfield" oninput="enterContentTxtColor()">
+			</div>
+		</div>
+	</div>
+</div>
+
+<br/><br/>
+
+<!--- Section 3 starts here -->
+
+<div class="container-fluid row maincol">
+	<div class=" col-12"><h1> Section 3 </h1></div>
+
+	<div id="colorBox1" class="col-2 grids" style="border-style: solid;  border-color: grey;">
+	</div>
+
+	<div id="colorBox2" class="col-2 grids" style="border-style: solid;  border-color: grey;">
+	</div>
+
+	<div id="colorBox3" class="col-2 grids" style="border-style: solid;  border-color: grey;">
+	</div>
+
+	<div id="colorBox4" class="col-2 grids" style="border-style: solid;  border-color: grey;">
+	</div>
+
+	<div id="colorBox5" class="col-2 grids" style="border-style: solid;  border-color: grey;">
+	</div>
+
+	<div id="colorBox6" class="col-2 grids" style="border-style: solid;  border-color: grey;">
+	</div>
+
+<!-- color text boxes start here -->
+
+	<div id="colorTxtBox1" class="col-2 grids">
+		Input Color:
+		<input type="color" name="hex-code" placeholder="Enter Hex Code" id="colorTxtBox1-textfield" oninput="enterBoxTxtColor1()">
+	</div>
+
+	<div id="colorTxtBox2" class="col-2 grids">
+		Input Color:
+		<input type="color" name="hex-code" placeholder="Enter Hex Code" id="colorTxtBox2-textfield" oninput="enterBoxTxtColor2()">
+	</div>
+
+	<div id="colorTxtBox3" class="col-2 grids">
+		Input Color:
+		<input type="color" name="colorTxtBox3-textfield" oninput="enterBoxTxtColor3()">
+
+	</div>
+
+	<div id="colorTxtBox4" class="col-2 grids">
+		Input Color:
+		<input type="color" name="colorTxtBox4-textfield">
+	</div>
+
+	<div id="colorTxtBox5" class="col-2 grids">
+		Input Color:
+		<input type="color" name="colorTxtBox5-textfield">
+
+	</div>
+
+	<div id="colorTxtBox6" class="col-2 grids">
+		Input Color:
+		<input type="color" name="colorTxtBox6-textfield">
+
+	</div>
+
+
+
+
+
+</div>
+
+
+</body>
+</html>
